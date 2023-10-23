@@ -22,21 +22,24 @@ namespace TClient
             using (var write = new StreamWriter(stream))
             using (var read = new StreamReader(stream))
             {
-                Console.WriteLine(await read.ReadToEndAsync());
+                //Aguardando a resposta inicial do servidor - MENU
+                Console.WriteLine(await read.ReadLineAsync());                
+                Console.WriteLine(await read.ReadLineAsync());
                 
-                string value = await SelectOption(); 
-                System.Console.WriteLine("valor: " + value);
+                //Entra no método de digitar opção e envia p/ servidor
+                string value = SelectOption();                 
+                System.Console.WriteLine("\nvalor: " + value);
                 await write.WriteLineAsync(value);
                 await write.FlushAsync();
             }
         }
-        public async Task<String> SelectOption(){
+        public string SelectOption(){
             while(true){
                 char op = Console.ReadKey().KeyChar;
                 if(op == '1' || op == '2'){
                     return op.ToString();
                 }else{
-                    System.Console.WriteLine(" -- Valor invalido");
+                    System.Console.WriteLine(" <-- Valor invalido");
                 }
             }
         }

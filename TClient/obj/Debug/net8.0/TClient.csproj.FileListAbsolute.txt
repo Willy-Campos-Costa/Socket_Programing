@@ -12,3 +12,4 @@ C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\refint\TClient.d
 C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\TClient.pdb
 C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\TClient.genruntimeconfig.cache
 C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\ref\TClient.dll
+C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\TClient.sourcelink.json
