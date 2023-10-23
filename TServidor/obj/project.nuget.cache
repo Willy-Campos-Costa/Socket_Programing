@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "k39urX5BOJSN+oYnGFR5SAoUULdzEi79/7gYSHIOU51aH9NvuBIufEPiN4CLaNvbEgmn3fxpQN7xvyUSAsxknA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TServidor\\TServidor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\willy.costa\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.12\\microsoft.netcore.app.ref.7.0.12.nupkg.sha512",
+    "C:\\Users\\willy.costa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.12\\microsoft.windowsdesktop.app.ref.7.0.12.nupkg.sha512",
+    "C:\\Users\\willy.costa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.12\\microsoft.aspnetcore.app.ref.7.0.12.nupkg.sha512",
+    "C:\\Users\\willy.costa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.12\\microsoft.netcore.app.host.win-x64.7.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
