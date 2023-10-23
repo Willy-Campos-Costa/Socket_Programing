@@ -28,34 +28,28 @@ namespace TServidor
             using(var stream = client.GetStream())
             using(var write = new StreamWriter(stream))
             using(var read = new StreamReader(stream)){
+                //Pegando o IP de quem se conectou
                 IPEndPoint Ep = (IPEndPoint)client.Client.RemoteEndPoint;
                 System.Console.WriteLine($"O client ip {Ep.Address} se conectou!");
 
+                //Enviando o menu para o cliente
                 await write.WriteLineAsync(FirstMessage());
                 await write.FlushAsync();
 
+                //Recebendo o valor do menu selecionado e trata cada um
                 Console.WriteLine("Aguardando valor do cliente...");
-                string value = await read.ReadLineAsync();
-                Console.WriteLine("Valor do cliente: " + value);
-
-                // string value = await read.ReadLineAsync();
-                // System.Console.WriteLine("Valor do cliente: " + value);
-                // if(value == "1"){
-                //     System.Console.WriteLine("valor 1");
-                // }else if(value == "2"){
-                //     System.Console.WriteLine("valor 2");
-                // }
-
-
-                // string request = await read.ReadLineAsync();
-                // Console.WriteLine($"Cliente diz: {request}");
-
-                // await write.WriteLineAsync("Olá, cliente!");
+                string? value = read.ReadLine();
+                System.Console.WriteLine("Valor do cliente: " + value);
+                if(value == "1"){
+                    System.Console.WriteLine("valor 1 - BOA");
+                }else if(value == "2"){
+                    System.Console.WriteLine("valor 2 - FORA");
+                }
             }
 
         }
         public string FirstMessage(){
-            return "Bem vindos ao sistema de compra de tickets do cinema Germany!\n\nSelecione uma das opções: [1] Ver filmes   [2] Sair";
+            return "Bem vindos ao sistema de compra de tickets do cinema Germany!\nSelecione uma das opções: [1] Ver filmes   [2] Sair";
         }
 
         public IEnumerable<Movies> MovieList(List<Movies> listMovie){

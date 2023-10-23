@@ -12,3 +12,4 @@ C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\refint\TServid
 C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\TServidor.pdb
 C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\TServidor.genruntimeconfig.cache
 C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\ref\TServidor.dll
+C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\TServidor.sourcelink.json
