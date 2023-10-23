@@ -8,7 +8,7 @@ namespace TClient
     {
         public async Task Start(){
             try{
-            string ip = "172.18.52.12" ; int port = 8000;
+            string ip = "172.18.52.11" ; int port = 8000;
             TcpClient client = new TcpClient();
             await client.ConnectAsync(IPAddress.Parse(ip),port);
             await Communication(client);
@@ -31,6 +31,11 @@ namespace TClient
                 System.Console.WriteLine("\nvalor: " + value);
                 await write.WriteLineAsync(value);
                 await write.FlushAsync();
+
+                //Recebe a lista de filmes p/ selecionar
+                System.Console.WriteLine(await read.ReadLineAsync());
+                int valNumer = int.Parse(await read.ReadLineAsync());
+                System.Console.WriteLine(valNumer);
             }
         }
         public string SelectOption(){
