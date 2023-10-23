@@ -11,7 +11,7 @@ namespace TServidor
     {
         public async Task Start(){
             try{
-            string ip = "172.18.52.12" ; int port = 8000;
+            string ip = "172.18.52.11" ; int port = 8000;
             TcpListener server = new TcpListener(IPAddress.Parse(ip),port);
             server.Start();
             System.Console.WriteLine("Aguardando conexões de clientes...");
@@ -41,7 +41,12 @@ namespace TServidor
                 string? value = read.ReadLine();
                 System.Console.WriteLine("Valor do cliente: " + value);
                 if(value == "1"){
-                    System.Console.WriteLine("valor 1 - BOA");
+                    await write.WriteLineAsync("Selecione um dos filmes para assistir.");
+                    List<Movies> movie = new List<Movies>(); MovieList(movie); //Criando a lista e preenchendo
+                    int movieLenght = movie.Count();
+                    
+                    await write.WriteLineAsync(movieLenght.ToString());
+                    await write.FlushAsync();
                 }else if(value == "2"){
                     System.Console.WriteLine("valor 2 - FORA");
                 }
@@ -56,7 +61,6 @@ namespace TServidor
             string[] filmes = new string[7];
                 filmes[0] = "O Segredo dos Seus Olhos"; filmes[1] = "Pulp Fiction"; filmes[2] = "O Senhor dos Anéis: A Sociedade do Anel";filmes[3] = "Matrix";filmes[4] = "Cidade de Deus";filmes[5] = "A Origem";filmes[6] = "A Lista de Schindler";
 
-            listMovie = new List<Movies>();
             for(int i=0; i<5; i++){
                     string name = filmes[new Random().Next(filmes.Length)];
                     int tickets = new Random().Next(1,10);
