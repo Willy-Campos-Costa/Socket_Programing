@@ -11,9 +11,9 @@ namespace TServidor
     {
         public async Task Start(){
             try{
-            string ip = "172.18.10.87" ; int port = 8000;
+            string ip = "192.168.100.18" ; int port = 8000;
             TcpListener server = new TcpListener(IPAddress.Parse(ip),port);
-            server.Start();
+            server.Start(); Console.Clear();
             System.Console.WriteLine("Carregando filmes do servidor...");
             List<Movies> movie = new List<Movies>(); MovieList(movie); //Criando a lista e preenchendo com os filmes
             System.Console.WriteLine("Filmes carregados");
@@ -42,26 +42,28 @@ namespace TServidor
                 //Recebendo o valor do menu selecionado e trata cada um
                 Console.WriteLine("Aguardando valor do cliente...");
                 string? value = read.ReadLine();
-                System.Console.WriteLine("Valor do cliente: " + value);
                 if(value == "1"){
                     await write.WriteLineAsync("Selecione um dos filmes para assistir:");
                     int movieLenght = movie.Count();
                     await write.WriteLineAsync(movieLenght.ToString()); //Enviando o tamanho da lista
                     for(int i=0; i<movieLenght; i++){
-                        await write.WriteLineAsync($"Id: [{i}] --- Tickets Disponiveis: {movie[i].AvaliableTickets} --- Preço: ${movie[i].Price},00 --- Filme: {movie[i].Name}");
+                        await write.WriteLineAsync($"Id: [{i+1}] --- Tickets Disponiveis: {movie[i].AvaliableTickets} --- Preço: ${movie[i].Price},00 --- Filme: {movie[i].Name}");
                     }
+                    await write.FlushAsync();
                     Console.WriteLine("Aguardando cliente selecionar o filme...");
-                    // string? MovieId = read.ReadLine(); //Recebendo o valor do filme selecionado
-                    // string Sucess = movie[int.Parse(MovieId)].removeTicket(1);
-                    // await write.WriteLineAsync(Sucess);
+                    string? MovieId = read.ReadLine(); //Recebendo o valor do filme selecionado
+                    string Sucess = movie[int.Parse(MovieId)-1].removeTicket(1);
+                    System.Console.WriteLine($"Sucesso: Cliente {Ep.Address} comprou um ingresso do filme {movie[int.Parse(MovieId)-1].Name}");
+                    await write.WriteLineAsync(Sucess);
 
-                    // for(int i=0; i<movieLenght; i++){
-                    //     await write.WriteLineAsync($"Id: [{i}] --- Tickets Disponiveis: {movie[i].AvaliableTickets} --- Preço: ${movie[i].Price},00 --- Filme: {movie[i].Name}");
-                    // }
+                    for(int i=0; i<movieLenght; i++){
+                        await write.WriteLineAsync($"Id: [{i+1}] --- Tickets Disponiveis: {movie[i].AvaliableTickets} --- Preço: ${movie[i].Price},00 --- Filme: {movie[i].Name}");
+                    }
                     
-                    // await write.FlushAsync();
+                    await write.FlushAsync();
                 }else if(value == "2"){
-                    System.Console.WriteLine("valor 2 - FORA");
+                    System.Console.WriteLine($"Desconectado o cliente {Ep.Address}");
+                    client.Close();
                 }
             }
 

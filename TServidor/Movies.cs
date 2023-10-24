@@ -15,7 +15,7 @@ namespace TServidor
 
         public string removeTicket(int value){
             if(AvaliableTickets <= 0){
-                return "Não é possivel comprar este ingresso";
+                return "Ingresso esgotado! Escolha outro filme";
             }else{
             AvaliableTickets -= value;
                 return $"Ingresso do filme {Name} comprado com sucesso! Se divirta";
