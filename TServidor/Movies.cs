@@ -13,8 +13,13 @@ namespace TServidor
             Price = price;
         }
 
-        public void removeTicket(int value){
+        public string removeTicket(int value){
+            if(AvaliableTickets <= 0){
+                return "Não é possivel comprar este ingresso";
+            }else{
             AvaliableTickets -= value;
+                return $"Ingresso do filme {Name} comprado com sucesso! Se divirta";
+            }
         }
     }
 }

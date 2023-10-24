@@ -11,20 +11,23 @@ namespace TServidor
     {
         public async Task Start(){
             try{
-            string ip = "172.18.52.11" ; int port = 8000;
+            string ip = "172.18.10.87" ; int port = 8000;
             TcpListener server = new TcpListener(IPAddress.Parse(ip),port);
             server.Start();
+            System.Console.WriteLine("Carregando filmes do servidor...");
+            List<Movies> movie = new List<Movies>(); MovieList(movie); //Criando a lista e preenchendo com os filmes
+            System.Console.WriteLine("Filmes carregados");
             System.Console.WriteLine("Aguardando conexões de clientes...");
             while(true){
                 TcpClient client = await server.AcceptTcpClientAsync();
-                ClientConnections(client);
+                ClientConnections(client, movie);
             }
             }catch(Exception ex){
                 System.Console.WriteLine("Problema na comunicação: "+ ex.Message);
             }
         }
 
-        public async Task ClientConnections(TcpClient client){
+        public async Task ClientConnections(TcpClient client, List<Movies> movie){
             using(var stream = client.GetStream())
             using(var write = new StreamWriter(stream))
             using(var read = new StreamReader(stream)){
@@ -41,12 +44,22 @@ namespace TServidor
                 string? value = read.ReadLine();
                 System.Console.WriteLine("Valor do cliente: " + value);
                 if(value == "1"){
-                    await write.WriteLineAsync("Selecione um dos filmes para assistir.");
-                    List<Movies> movie = new List<Movies>(); MovieList(movie); //Criando a lista e preenchendo
+                    await write.WriteLineAsync("Selecione um dos filmes para assistir:");
                     int movieLenght = movie.Count();
+                    await write.WriteLineAsync(movieLenght.ToString()); //Enviando o tamanho da lista
+                    for(int i=0; i<movieLenght; i++){
+                        await write.WriteLineAsync($"Id: [{i}] --- Tickets Disponiveis: {movie[i].AvaliableTickets} --- Preço: ${movie[i].Price},00 --- Filme: {movie[i].Name}");
+                    }
+                    Console.WriteLine("Aguardando cliente selecionar o filme...");
+                    // string? MovieId = read.ReadLine(); //Recebendo o valor do filme selecionado
+                    // string Sucess = movie[int.Parse(MovieId)].removeTicket(1);
+                    // await write.WriteLineAsync(Sucess);
+
+                    // for(int i=0; i<movieLenght; i++){
+                    //     await write.WriteLineAsync($"Id: [{i}] --- Tickets Disponiveis: {movie[i].AvaliableTickets} --- Preço: ${movie[i].Price},00 --- Filme: {movie[i].Name}");
+                    // }
                     
-                    await write.WriteLineAsync(movieLenght.ToString());
-                    await write.FlushAsync();
+                    // await write.FlushAsync();
                 }else if(value == "2"){
                     System.Console.WriteLine("valor 2 - FORA");
                 }
@@ -69,16 +82,6 @@ namespace TServidor
                 listMovie.Add(new Movies(name,tickets,Price));
             }
             return listMovie;
-        }
-        public void ShowMovies(BinaryWriter write){
-            List<Movies> movies = new List<Movies>();
-            MovieList(movies);
-
-            write.Write(movies.Count());
-            foreach (var movie in movies)
-            {
-                write.Write($"Filme: {movie.Name} --- Preço: {movie.Price} --- Qtd Disponivel: {movie.AvaliableTickets}");
-            }
         }
     }
 }
