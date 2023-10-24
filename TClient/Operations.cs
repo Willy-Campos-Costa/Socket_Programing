@@ -8,7 +8,7 @@ namespace TClient
     {
         public async Task Start(){
             try{
-            string ip = "172.18.52.11" ; int port = 8000;
+            string ip = "172.18.10.87" ; int port = 8000;
             TcpClient client = new TcpClient();
             await client.ConnectAsync(IPAddress.Parse(ip),port);
             await Communication(client);
@@ -27,21 +27,32 @@ namespace TClient
                 Console.WriteLine(await read.ReadLineAsync());
                 
                 //Entra no método de digitar opção e envia p/ servidor
-                string value = SelectOption();                 
+                string value = SelectOption(2);                 
                 System.Console.WriteLine("\nvalor: " + value);
                 await write.WriteLineAsync(value);
                 await write.FlushAsync();
 
                 //Recebe a lista de filmes p/ selecionar
+                Console.Clear();
                 System.Console.WriteLine(await read.ReadLineAsync());
-                int valNumer = int.Parse(await read.ReadLineAsync());
-                System.Console.WriteLine(valNumer);
+                int movieLenght = int.Parse(await read.ReadLineAsync());
+                for(int i=0; i<movieLenght; i++){
+                    System.Console.WriteLine(await read.ReadLineAsync());
+                }
+                // string MovieId = SelectOption(movieLenght);
+                // await write.WriteLineAsync(MovieId); //Enviando a opção do filme selecionado
+                // Console.WriteLine(await read.ReadLineAsync());                
+
+                // for(int i=0; i<movieLenght; i++){
+                //     System.Console.WriteLine(await read.ReadLineAsync());
+                // }
             }
         }
-        public string SelectOption(){
+        public string SelectOption(int x){
             while(true){
-                char op = Console.ReadKey().KeyChar;
-                if(op == '1' || op == '2'){
+                var op = Console.ReadKey().KeyChar.ToString();
+                var val = int.TryParse(op, out int valor);
+                if(valor <= x && valor > 0){
                     return op.ToString();
                 }else{
                     System.Console.WriteLine(" <-- Valor invalido");
