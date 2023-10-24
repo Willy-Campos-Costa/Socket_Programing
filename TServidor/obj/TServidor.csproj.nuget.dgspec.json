@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TServidor\\TServidor.csproj": {}
+    "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TServidor\\TServidor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TServidor\\TServidor.csproj": {
+    "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TServidor\\TServidor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TServidor\\TServidor.csproj",
+        "projectUniqueName": "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TServidor\\TServidor.csproj",
         "projectName": "TServidor",
-        "projectPath": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TServidor\\TServidor.csproj",
-        "packagesPath": "C:\\Users\\willy.costa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TServidor\\obj\\",
+        "projectPath": "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TServidor\\TServidor.csproj",
+        "packagesPath": "C:\\Users\\willy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TServidor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\willy.costa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\willy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

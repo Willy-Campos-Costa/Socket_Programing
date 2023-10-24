@@ -8,24 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\willy.costa\\.nuget\\packages\\": {}
+    "C:\\Users\\willy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TClient\\TClient.csproj",
+      "projectUniqueName": "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TClient\\TClient.csproj",
       "projectName": "TClient",
-      "projectPath": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TClient\\TClient.csproj",
-      "packagesPath": "C:\\Users\\willy.costa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TClient\\obj\\",
+      "projectPath": "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TClient\\TClient.csproj",
+      "packagesPath": "C:\\Users\\willy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\willy.costa\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\willy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

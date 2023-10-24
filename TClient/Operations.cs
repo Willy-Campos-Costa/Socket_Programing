@@ -6,9 +6,10 @@ namespace TClient
 {
     public class Operations
     {
+        //Método inicial para fazer a conexão do cliente com o servidor
         public async Task Start(){
             try{
-            string ip = "192.168.100.18" ; int port = 8000;
+            string ip = "25.56.249.202" ; int port = 8000;
             TcpClient client = new TcpClient();
             await client.ConnectAsync(IPAddress.Parse(ip),port);
             await Communication(client);
@@ -16,6 +17,8 @@ namespace TClient
                 System.Console.WriteLine("Problema ao comunicar com o servidor: "+ex.Message);
             };
         }
+
+        //Método principal de comunicação com o servidor (Troca de mensagem)
         public async Task Communication(TcpClient client){
             Console.Clear();
             using (var stream = client.GetStream())
@@ -36,20 +39,18 @@ namespace TClient
                 Console.Clear();
                 System.Console.WriteLine(await read.ReadLineAsync());
                 int movieLenght = int.Parse(await read.ReadLineAsync());
-                for(int i=0; i<movieLenght; i++){
-                    System.Console.WriteLine(await read.ReadLineAsync());
-                }
+                movieList(read,movieLenght);
                 string MovieId = SelectOption(movieLenght);
-                System.Console.WriteLine($"\nValor: {MovieId}");
-                await write.WriteLineAsync(MovieId); //Enviando a opção do filme selecionado
+                System.Console.WriteLine();
+
+                //Enviando a opção do filme selecionado
+                await write.WriteLineAsync(MovieId); 
                 await write.FlushAsync();
                 Console.WriteLine(await read.ReadLineAsync());                
-
-                for(int i=0; i<movieLenght; i++){
-                    System.Console.WriteLine(await read.ReadLineAsync());
-                }
             }
         }
+
+        //Método para seleção de opção
         public string SelectOption(int x){
             while(true){
                 var op = Console.ReadKey().KeyChar.ToString();
@@ -59,6 +60,13 @@ namespace TClient
                 }else{
                     System.Console.WriteLine(" <-- Valor invalido");
                 }
+            }
+        }
+
+        //Método para listar os filmes disponiveis
+        public async void movieList(StreamReader read, int movieLenght){
+            for(int i=0; i<movieLenght; i++){
+            System.Console.WriteLine(await read.ReadLineAsync());
             }
         }
     }

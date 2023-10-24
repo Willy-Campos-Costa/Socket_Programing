@@ -13,3 +13,18 @@ C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\TServidor.pdb
 C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\TServidor.genruntimeconfig.cache
 C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\ref\TServidor.dll
 C:\Users\willy.costa\Desktop\h\Tickets\TServidor\obj\Debug\net7.0\TServidor.sourcelink.json
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\bin\Debug\net7.0\TServidor.exe
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\bin\Debug\net7.0\TServidor.deps.json
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\bin\Debug\net7.0\TServidor.runtimeconfig.json
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\bin\Debug\net7.0\TServidor.dll
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\bin\Debug\net7.0\TServidor.pdb
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.AssemblyInfoInputs.cache
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.AssemblyInfo.cs
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.csproj.CoreCompileInputs.cache
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.dll
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\refint\TServidor.dll
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.pdb
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.genruntimeconfig.cache
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\ref\TServidor.dll
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TServidor\obj\Debug\net7.0\TServidor.sourcelink.json

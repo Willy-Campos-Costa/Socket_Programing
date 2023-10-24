@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mmQJru3KkFushYxZNHJ6rSTutZuLEvn/738V/JNiFtShkr+rxh7b3t27BkshsWHylg2vEXRBN8p/RSYpoMkhnQ==",
+  "dgSpecHash": "2xm5z5u056CHb4oMVMEKbBTbK3jX0yevto+cpD1OAjvWI/Cj5IfLLO0R7ED2WJWItovB+vYivj/Ce4GOz4K3LA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\willy.costa\\Desktop\\h\\Tickets\\TClient\\TClient.csproj",
+  "projectFilePath": "C:\\Users\\willy\\Desktop\\Projetos VS\\Projeto Socket Csharp\\Socket_Programing\\TClient\\TClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -13,3 +13,18 @@ C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\TClient.pdb
 C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\TClient.genruntimeconfig.cache
 C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\ref\TClient.dll
 C:\Users\willy.costa\Desktop\h\Tickets\TClient\obj\Debug\net8.0\TClient.sourcelink.json
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\bin\Debug\net8.0\TClient.exe
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\bin\Debug\net8.0\TClient.deps.json
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\bin\Debug\net8.0\TClient.runtimeconfig.json
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\bin\Debug\net8.0\TClient.dll
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\bin\Debug\net8.0\TClient.pdb
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.AssemblyInfoInputs.cache
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.AssemblyInfo.cs
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.csproj.CoreCompileInputs.cache
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.sourcelink.json
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.dll
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\refint\TClient.dll
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.pdb
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\TClient.genruntimeconfig.cache
+C:\Users\willy\Desktop\Projetos VS\Projeto Socket Csharp\Socket_Programing\TClient\obj\Debug\net8.0\ref\TClient.dll
